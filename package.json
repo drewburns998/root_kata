@@ -4,6 +4,7 @@
   "description": "Root Kata",
   "main": "index.js",
   "scripts": {
+    "": "",
     "test": "mocha *.test.js",
     "test:watch": "mocha -w \"**/**/*.test.js\"",
     "format": "prettier --write \"**/*.{js,json,md}\""
@@ -16,6 +17,7 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
+    "function-composition": "^1.0.12",
     "lodash": "^4.17.19",
     "moment": "^2.27.0"
   }
