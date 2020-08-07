@@ -1,0 +1,22 @@
+{
+  "name": "driving_data_reporter",
+  "version": "1.0.0",
+  "description": "Root Kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.test.js",
+    "test:watch": "mocha -w \"**/*.test.js\"",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "author": "Drew Burns",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "moment": "^2.27.0"
+  }
+}
