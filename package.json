@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha *.test.js",
-    "test:watch": "mocha -w \"**/*.test.js\"",
+    "test:watch": "mocha -w \"**/**/*.test.js\"",
     "format": "prettier --write \"**/*.{js,json,md}\""
   },
   "author": "Drew Burns",
