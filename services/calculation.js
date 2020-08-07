@@ -4,11 +4,11 @@ const moment = require("moment")
 const aggregateTripData = (driveData) => {
   const tripsWithinMphBoundaries = driveData.trips.filter(checkMphBounds)
 
-  return ({
+  return {
     name: driveData.name,
     totalMiles: totalMiles(tripsWithinMphBoundaries),
-    averageMilesPerHour: averageMilesPerHour(tripsWithinMphBoundaries)
-  })
+    averageMilesPerHour: averageMilesPerHour(tripsWithinMphBoundaries),
+  }
 }
 
 const checkMphBounds = (trip) => {
@@ -21,11 +21,13 @@ const averageMilesPerHour = (trips) => {
 }
 
 const totalMiles = (trips) => {
-  return sumBy(trips, trip => trip.distance)
+  return sumBy(trips, (trip) => trip.distance)
 }
 
 const totalHours = (trips) => {
-  return sumBy(trips, ({ startTime, endTime }) => differenceInHours(startTime, endTime))
+  return sumBy(trips, ({ startTime, endTime }) =>
+    differenceInHours(startTime, endTime)
+  )
 }
 
 const differenceInHours = (startTime, endTime) => {

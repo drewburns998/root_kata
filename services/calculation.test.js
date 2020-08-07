@@ -11,7 +11,7 @@ describe("calculation service", () => {
     beforeEach(() => {
       const driverTripData = {
         name: "Andrew",
-        trips: []
+        trips: [],
       }
 
       aggregatedTripData = aggregateTripData(driverTripData)
@@ -26,7 +26,7 @@ describe("calculation service", () => {
     })
   })
 
-  describe.only("aggregates driver data including the", () => {
+  describe("aggregates driver data including the", () => {
     let aggregatedTripData
 
     beforeEach(() => {
@@ -35,7 +35,7 @@ describe("calculation service", () => {
         trips: [
           { startTime: time("02:00"), endTime: time("03:00"), distance: 20 },
           { startTime: time("03:00"), endTime: time("04:00"), distance: 80 },
-      ]
+        ],
       }
 
       aggregatedTripData = aggregateTripData(driverTripData)
